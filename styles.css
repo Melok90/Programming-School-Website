@@ -9,12 +9,12 @@ body {
   background-color: #2c2642;
 }
 
-.my-footer {
+.footer-wrapper {
   font-family: "Share Tech Mono", monospace;
   max-width: 1960px;
   background-color: #2c2642;
 }
-.my-footer .footer-wrapper .main-footer {
+.footer-wrapper .footer-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,10 +24,26 @@ body {
   padding: 45px 100px 45px 200px;
 }
 
-.block-icon-wrapper {
-  max-width: 190px;
+.footer-block {
+  max-width: 220px;
 }
-.block-icon-wrapper .block-icon {
+.footer-block .block-title {
+  padding: 8px 0px;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: bisque;
+}
+.footer-block a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 0px;
+  color: #998acb;
+}
+.footer-block a:hover {
+  color: bisque;
+}
+.footer-block .item-block-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,16 +51,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.block-icon-wrapper .block-icon img {
+.footer-block .item-block-logo img {
   height: 45px;
 }
-.block-icon-wrapper .block-icon a {
+.footer-block .item-block-logo a {
   color: #f5deb3;
   font-size: 26px;
   text-decoration: none;
   margin-left: 20px;
 }
-.block-icon-wrapper .social-icon {
+.footer-block .item-block-social {
   max-width: 160px;
   height: 30px;
   margin: 50px 0px;
@@ -55,52 +71,22 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.block-icon-wrapper .social-icon .footer-logo-icon:hover svg path {
+.footer-block .item-block-social .footer-logo-icon:hover svg path {
   fill: bisque;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
-.block-icon-wrapper p {
-  font-size: 32px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.courses {
-  max-width: 190px;
-  height: 90px;
-}
-.courses .courses-title {
-  padding: 8px 0px;
-  font-size: 26px;
-  margin-bottom: 20px;
-  color: bisque;
-}
-.courses a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 8px 0px;
-  color: #998acb;
-}
-.courses a:hover {
-  color: bisque;
-}
-
-.payment:hover {
+.footer-block .item-block-payment:hover {
   -webkit-filter: hue-rotate(40deg);
           filter: hue-rotate(40deg);
 }
-
-.payment {
+.footer-block .item-block-payment {
   width: 190px;
   border-radius: 5px;
   background-color: #443861;
   cursor: default;
 }
-.payment .shield {
+.footer-block .item-block-payment .block-payment-shield {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,13 +95,13 @@ body {
           align-items: center;
   padding: 10px;
 }
-.payment .shield p {
+.footer-block .item-block-payment .block-payment-shield .block-payment-text {
   font-size: 14px;
   margin-left: 10px;
   white-space: nowrap;
   color: #998acb;
 }
-.payment .cards {
+.footer-block .item-block-payment .block-payment-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,28 +114,9 @@ body {
   height: 40px;
   padding: 10px;
 }
-.payment .cards img {
+.footer-block .item-block-payment .block-payment-cards img {
   width: 30%;
   height: 65%;
-}
-
-.info .info-title {
-  padding: 8px 0px;
-  font-size: 26px;
-  margin: 0px 0px 20px 0px;
-  color: bisque;
-}
-.info a {
-  display: block;
-  margin: 0;
-  padding: 8px 0px;
-  font-size: 18px;
-  cursor: pointer;
-  color: #998acb;
-  text-decoration: none;
-}
-.info a:hover {
-  color: bisque;
 }
 
 .box-send {
@@ -158,20 +125,16 @@ body {
   padding: 20px;
   border-radius: 5px;
 }
-.box-send p,
-.box-send a {
-  font-size: 16px;
-  color: bisque;
-  margin: 20px 0px;
-}
-.box-send a:hover {
-  color: #2c2642;
-}
 .box-send .send-title {
   font-size: 26px;
   color: bisque;
 }
-.box-send .custom-field {
+.box-send .box-send-text {
+  font-size: 16px;
+  color: bisque;
+  margin: 14px 0px;
+}
+.box-send .input-field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,7 +142,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.box-send .custom-field #email-field {
+.box-send .input-field .email-field {
   font-family: "Share Tech Mono", monospace;
   color: #625e67;
   font-size: 16px;
@@ -192,7 +155,7 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.box-send .custom-field .btn-primary {
+.box-send .input-field .btn-input-field {
   outline: none;
   border: none;
   border-radius: 0 6px 6px 0;
@@ -203,28 +166,21 @@ body {
   margin: 0;
   background-color: #998acb;
 }
-.box-send .custom-field .btn-primary:hover {
+.box-send .input-field .btn-input-field .btn-input-field:hover {
   background-color: #5d4c87;
   cursor: pointer;
 }
-.box-send .custom-field .btn-primary:active {
+.box-send .input-field .btn-input-field .btn-input-field:active {
   background-color: #998acb;
-}
-.box-send .arrow-input {
-  width: 40px;
-  height: 50px;
-}
-
-.support-links {
-  font-size: 18px;
-  text-decoration: none;
-  color: #998acb;
 }
 
 .links-transform .support-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 20px;
 }
 .links-transform .support-links:hover {
@@ -237,14 +193,4 @@ body {
 }
 .links-transform svg {
   margin-right: 12px;
-}
-
-.support .support-title {
-  padding: 8px 0px;
-  font-size: 26px;
-  color: bisque;
-  margin-bottom: 20px;
-}
-.support .help {
-  margin-left: 4px;
 }
