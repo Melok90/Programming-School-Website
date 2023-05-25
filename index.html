@@ -5,10 +5,11 @@
   <meta charset="utf-8" />
   <title>My_Blog</title>
   <base href="/" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1" />
   <link rel="icon" type="image/x-icon" href="./img/logo_2.svg" />
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link href="./styles.css" rel="stylesheet" />
 
 </head>
@@ -137,9 +138,63 @@
       </div>
     </div>
   </section>
+
   <!-- //////////swiper/////////// -->
-  <section class ="swiper-news-wrapper">
-    
+  <section class="swiper-news-wrapper">
+    <div class="swiper-news__text">
+      <div class="swiper-news__title title__text">
+        Latest news
+      </div>
+      <div class="swiper-news__subtitle text__subtitle_large">
+        keeping up with the latest digital news
+      </div>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+
+          <div class="slide-item">
+
+
+            <div class="slide-item__image">
+              <img src="./img/swapper-icon/revolution_icon.svg" alt="">
+
+            </div>
+            <div class="slide-item__text">
+              
+                Revolution in Quantum Computing
+             
+            </div>
+
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-item">
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-item">
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-item">
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-item">
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
 
   </section>
 
@@ -280,6 +335,7 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>
 

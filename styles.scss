@@ -4,10 +4,16 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
+@media screen and (max-width: 1280px) {
+}
+@media screen and (min-width: 1140px) {
+}
+@media screen and (max-width: 992px) {
+}
+
 body {
   font-family: "Share Tech Mono", monospace;
   background-color: #1e1e1e;
-  
 }
 
 .container {
@@ -16,15 +22,15 @@ body {
   margin: 0 auto;
 }
 .background-container {
-  // max-width: 1960px;
+  max-width: 1960px;
   background-image: url("./img/backgrn_1_all.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   margin: 0 auto;
 
   .header-wrapper {
-    padding: 70px 50px 185px 50px;
+    padding: 70px 50px 40px 50px;
 
     .navigation-section {
       display: flex;
@@ -104,8 +110,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  width: 235px;
-  height: 50px;
+  width: 176px;
+  height: 38px;
   border-radius: 30px;
   font-weight: 400;
   font-size: 20px;
@@ -113,6 +119,7 @@ body {
   cursor: pointer;
   &.button-send:hover {
     background-color: #eeeeee;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -130,12 +137,17 @@ body {
       letter-spacing: -0.06em;
     }
   }
+  .about-us-block__subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   .input-subscription {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     font-family: inherit;
-    max-width: 990px;
+    max-width: 742px;
     margin-top: 50px;
     padding: 30px 40px;
     background: rgba(82, 88, 102, 0.9);
@@ -145,9 +157,9 @@ body {
       width: 100%;
       .input__field {
         input[type="email"] {
-          max-width: 583px;
+          max-width: 438px;
           width: 100%;
-          height: 50px;
+          height: 38px;
           padding: 14px;
           background-color: #ffffff;
           border-radius: 30px;
@@ -161,12 +173,11 @@ body {
       margin-left: 20px;
       background: #439a86;
       color: #ececec;
+      &:hover {
+        background: #439a86c9;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+      }
     }
-  }
-
-  .about-us-block__subtitle {
-    max-width: 700px;
-    margin: 0 auto;
   }
 }
 
@@ -179,6 +190,7 @@ body {
 
   .our-materials-container {
     display: flex;
+    justify-content: space-around;
     margin-top: -37px;
     margin-bottom: -35px;
     margin-left: 63px;
@@ -188,11 +200,19 @@ body {
     background: rgba(118, 118, 118, 0.2);
     backdrop-filter: blur(7.5px);
     border-radius: 20px;
+  
 
     .our-block-text {
       max-width: 588px;
+      width: 50%;
       max-height: 376px;
-      padding: 0px 156px 150px 0px;
+      padding: 0px 60px 150px 0px;
+
+      @media (min-width: 1200px) {
+        padding: 0px 156px 150px 0px;
+        width: 100%;
+      }
+
       border-right: 3px solid #ececec;
 
       .our-block__title {
@@ -209,7 +229,6 @@ body {
       flex-direction: column;
       gap: 30px;
       .training-materials-cards {
-        
         max-width: 304px;
         width: 100%;
         height: 112px;
@@ -227,6 +246,67 @@ body {
         display: flex;
         gap: 30px;
         padding: 9px 20px 7px 20px;
+
+        img {
+          transition-duration: 200ms;
+        }
+        img:hover {
+          transform: scale(1.1, 1.1);
+          transition-duration: 200ms;
+        }
+      }
+    }
+  }
+}
+.swiper-news-wrapper {
+  background-image: url("./img/backgrn_section_wrapper.svg");
+  background-position: center;
+  padding-top: 100px;
+
+  .swiper {
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    .swiper-wrapper {
+      .swiper-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slide-item {
+          cursor: pointer;
+          display: flex;
+          padding: 22.5px;
+          max-width: 432px;
+          width: 100%;
+          height: 172.5px;
+          background: rgba(153, 138, 203, 0.3);
+          backdrop-filter: blur(11.25px);
+          border-radius: 7.5px;
+          transition-duration: 100ms;
+          &:hover {
+            transition-duration: 100ms;
+            transform: scale(1.02, 1.05);
+          }
+          .slide-item__text {
+            margin-left: 22.5px;
+            // max-width: 220px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 101.7%;
+            color: #ececec;
+          }
+          .slide-item__image {
+            img {
+              
+              width: 100%;
+            }
+            
+          }
+        }
       }
     }
   }
