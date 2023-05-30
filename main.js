@@ -66,7 +66,7 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].onclick = function () {
     var activeElement = document.querySelector('.active');
-    
+
     if (activeElement && activeElement !== this) {
       activeElement.classList.toggle('active');
       activeElement.style.color = '';
@@ -74,12 +74,12 @@ for (i = 0; i < acc.length; i++) {
       activeElement.nextElementSibling.classList.toggle('show');
       activeElement.querySelector('.arrow').setAttribute('hidden', 'true');
     }
-    
+
     this.classList.toggle('active');
     this.style.color = this.classList.contains('active') ? '#252525' : '';
     this.style.backgroundColor = this.classList.contains('active') ? '#ececec' : '';
     this.nextElementSibling.classList.toggle('show');
-    this.querySelector('.arrow').removeAttribute('hidden'); 
+    this.querySelector('.arrow').removeAttribute('hidden');
 
     const arrowElement = this.querySelector('.arrow');
     if (this.classList.contains('active')) {
@@ -130,3 +130,40 @@ function getRandomInt(max) {
 typeText();
 
 //////map/////
+
+
+
+let center = [51.49705037294127, -0.18205639077445052];
+
+function init() {
+  let map = new ymaps.Map('map', {
+    center: center,
+    zoom: 15
+  });
+
+  placemark_main = new ymaps.Placemark([51.49705037294127, -0.18205639077445052], {
+    balloonContentHeader: 'Our adress:',
+    balloonContentBody: 'Elvaston PI str. 23',
+    balloonContentFooter: '',
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: './img/logo_1.svg',
+    iconImageSize: [30, 30],
+    iconImageOffset: [-10, -80],
+
+
+
+
+
+  }),
+  placemark_main.balloon.open;
+    map.geoObjects.add(placemark_main);
+    map.controls.remove('searchControl'); // удаляем поиск
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+    map.controls.remove('typeSelector'); // удаляем тип
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+    map.controls.remove('rulerControl');
+}
+
+ymaps.ready(init);

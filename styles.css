@@ -399,7 +399,6 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  max-height: 220px;
 }
 .chart-wrapper .chart-box .chart__description .description-item {
   cursor: pointer;
@@ -409,6 +408,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
+}
+.chart-wrapper .chart-box .chart__description .description-item:last-child {
+  margin-bottom: 0px;
 }
 .chart-wrapper .chart-box .chart__description .description-item .description__text {
   font-family: "Share Tech Mono";
@@ -673,9 +676,9 @@ body {
 }
 .according-wrapper .according-wrapper-page {
   max-width: 916px;
-  padding: 14px 130px;
+  padding: 16px 130px 30px 130px;
   width: 100%;
-  height: 616px;
+  max-height: 700px;
   background: rgba(217, 217, 217, 0.05);
   -webkit-backdrop-filter: blur(11.25px);
           backdrop-filter: blur(11.25px);
@@ -683,6 +686,7 @@ body {
 }
 .according-wrapper .according-wrapper-page .according-content {
   margin-top: 30px;
+  margin-bottom: 200px;
 }
 .according-wrapper .according-wrapper-page .according-content .according-item {
   padding: 10px;
@@ -730,26 +734,78 @@ body {
 }
 
 .footer-background {
-  height: 400px;
-  background-image: url("./img/backgrn_footer.svg");
-  background-position: center;
+  background-image: url("./img/backgrn_section_wrapper.svg");
+  background-color: #313039;
+  background-position: top;
+  background-size: contain;
+}
+.footer-background .map-location-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 100px;
+}
+.footer-background .map-location-wrapper .map-location {
+  background-image: -webkit-gradient(linear, right top, left top, from(hsl(0deg, 0%, 45%)), color-stop(2%, hsl(273deg, 4%, 42%)), color-stop(6%, hsl(272deg, 8%, 38%)), color-stop(10%, hsl(271deg, 13%, 35%)), color-stop(16%, hsl(271deg, 19%, 32%)), color-stop(23%, hsl(270deg, 26%, 29%)), color-stop(31%, hsl(269deg, 35%, 25%)), color-stop(40%, hsl(264deg, 35%, 26%)), color-stop(49%, hsl(254deg, 27%, 29%)), color-stop(59%, hsl(239deg, 21%, 33%)), color-stop(69%, hsl(224deg, 23%, 35%)), color-stop(80%, hsl(211deg, 24%, 37%)), color-stop(90%, hsl(201deg, 27%, 38%)), to(hsl(192deg, 29%, 39%)));
+  background-image: linear-gradient(270deg, hsl(0deg, 0%, 45%) 0%, hsl(273deg, 4%, 42%) 2%, hsl(272deg, 8%, 38%) 6%, hsl(271deg, 13%, 35%) 10%, hsl(271deg, 19%, 32%) 16%, hsl(270deg, 26%, 29%) 23%, hsl(269deg, 35%, 25%) 31%, hsl(264deg, 35%, 26%) 40%, hsl(254deg, 27%, 29%) 49%, hsl(239deg, 21%, 33%) 59%, hsl(224deg, 23%, 35%) 69%, hsl(211deg, 24%, 37%) 80%, hsl(201deg, 27%, 38%) 90%, hsl(192deg, 29%, 39%) 100%);
+  border-radius: 20px 0px 0px 20px;
+  max-width: 975px;
+  width: 100%;
+  height: 450px;
+  margin-right: -700px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+@media (min-width: 790px) {
+  .footer-background .map-location-wrapper .map-location {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.footer-background .map-location-wrapper .map-location .location-text {
+  text-align: start;
+  padding: 20px;
+  max-width: 200px;
 }
 .footer-background .map-location-wrapper .map-wrapper {
-  max-width: 800px;
-  width: 100%;
-  border-radius: 20px;
-  background-color: #439a86;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-top: 56px;
+}
+.footer-background .map-location-wrapper .map-wrapper .map-location-text-box {
+  padding-bottom: 20px;
+}
+.footer-background .map-location-wrapper .map-wrapper .map {
+  width: 700px;
+  height: 450px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+@media (min-width: 790px) {
+  .footer-background .map-location-wrapper .map-wrapper .map {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .footer-container {
-  background-color: #1e1e1e;
   margin: 0 auto;
 }
 .footer-container .footer-wrapper {
   font-family: "Share Tech Mono", monospace;
   max-width: 1200px;
   width: 100%;
-  background-color: #1e1e1e;
   padding: 43px 0px 61px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -837,7 +893,7 @@ body {
   height: 65%;
 }
 .footer-container .box-send {
-  background-color: rgba(153, 138, 203, 0.7764705882);
+  background-color: #484063;
   max-width: 300px;
   padding: 20px;
   border-radius: 5px;

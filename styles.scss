@@ -355,15 +355,19 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      max-height: 220px;
+    
 
       .description-item {
         cursor: pointer;
         display: flex;
         align-items: center;
+        margin-bottom: 20px;
 
-        .description__image {
+        &:last-child {
+          margin-bottom: 0px;
         }
+
+      
         .description__text {
           font-family: "Share Tech Mono";
           font-style: normal;
@@ -564,16 +568,16 @@ body {
 
   .according-wrapper-page {
     max-width: 916px;
-    padding: 14px 130px;
+    padding: 16px 130px 30px 130px;
     width: 100%;
-    height: 616px;
+    max-height: 700px;
     background: rgba(217, 217, 217, 0.05);
     backdrop-filter: blur(11.25px);
     border-radius: 15px;
 
-    
     .according-content {
       margin-top: 30px;
+      margin-bottom: 200px;
 
       .according-item {
         padding: 10px;
@@ -592,18 +596,13 @@ body {
           padding: 10px;
           font-size: 1.2em;
 
-          .btn__arrow {
-            // transform: rotate(180deg);
-          }
-
           &:active {
             background-color: #252525;
           }
           &:hover {
-            background-color:rgba(217, 217, 217, 0.067);
+            background-color: rgba(217, 217, 217, 0.067);
             border: 1.5px solid #ececec;
           }
-          
         }
         .accordion__text {
           display: none;
@@ -625,30 +624,83 @@ body {
 
 ////map////
 .footer-background {
-  height: 400px;
-  background-image: url("./img/backgrn_footer.svg");
-  background-position: center;
+  background-image: url("./img/backgrn_section_wrapper.svg");
+  background-color: #313039;
+  background-position: top;
+  background-size: contain;
+  
   .map-location-wrapper {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items:baseline;
+    padding-bottom: 100px;
 
-    .map-wrapper {
-      max-width: 800px;
+    .map-location {
+      background-image: linear-gradient(
+  270deg,
+  hsl(0deg 0% 45%) 0%,
+  hsl(273deg 4% 42%) 2%,
+  hsl(272deg 8% 38%) 6%,
+  hsl(271deg 13% 35%) 10%,
+  hsl(271deg 19% 32%) 16%,
+  hsl(270deg 26% 29%) 23%,
+  hsl(269deg 35% 25%) 31%,
+  hsl(264deg 35% 26%) 40%,
+  hsl(254deg 27% 29%) 49%,
+  hsl(239deg 21% 33%) 59%,
+  hsl(224deg 23% 35%) 69%,
+  hsl(211deg 24% 37%) 80%,
+  hsl(201deg 27% 38%) 90%,
+  hsl(192deg 29% 39%) 100%
+);
+      border-radius: 20px 0px 0px 20px;
+      max-width: 975px;
       width: 100%;
-      border-radius: 20px;
-      background-color: #439a86;
+      height: 450px;
+      margin-right: -700px;
+      // z-index: 1;
+      transform: scale(0.8);
+        @media (min-width: 790px) {
+          transform: scale(1);
+        }
 
+        .location-text {
+          text-align: start;
+          padding: 20px;
+          max-width: 200px;
+        }
+    }
+    .map-wrapper {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      margin-top: 56px;
+      
+      .map-location-text-box {
+        padding-bottom: 20px;
+      }
+
+      .map {
+        width: 700px;
+        height: 450px;
+        transform: scale(0.8);
+        @media (min-width: 790px) {
+          transform: scale(1);
+        }
+      }
     }
   }
 }
 
 /////footer/////
 .footer-container {
-  background-color: #1e1e1e;
   margin: 0 auto;
+
   .footer-wrapper {
     font-family: "Share Tech Mono", monospace;
     max-width: 1200px;
     width: 100%;
-    background-color: #1e1e1e;
     padding: 43px 0px 61px 0px;
     display: flex;
     margin: 0 auto;
@@ -729,7 +781,7 @@ body {
   }
 
   .box-send {
-    background-color: #998acbc6;
+    background-color: #484063;
     max-width: 300px;
     padding: 20px;
     border-radius: 5px;
