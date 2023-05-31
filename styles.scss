@@ -194,7 +194,10 @@ body {
   .about-us-block {
     margin: 0 auto;
     max-width: 757px;
-    height: 240px;
+    height: 190px;
+    @media (min-width: 790px) {
+      height: 240px;
+      }
 
     .about-us-block__title {
       padding: 10px 20px;
@@ -365,6 +368,12 @@ body {
     padding-top: 100px;
   }
 
+  .swiper-news__text {
+    padding-top: 30px;
+    @media (min-width: 792px) {
+      padding-top: 0px;
+    }
+  }
   .swiper {
     margin-top: 10px;
     padding: 10px 0px 20px 0px;
@@ -384,6 +393,7 @@ body {
         .slide-item {
           cursor: pointer;
           display: flex;
+          align-items: center;
           padding: 10px;
           max-width: 432px;
           height: 98px;
@@ -410,7 +420,8 @@ body {
             align-items: center;
             text-align: left;
             margin-left: 10px;
-            max-width: 145px;
+            // max-width: 145px;
+            max-width: calc(200px + 130 * ((100vw - 320px) / 1200));
             font-weight: 400;
             font-size: 14px;
             line-height: 101.7%;
@@ -423,8 +434,14 @@ body {
             }
           }
           .slide-item__image {
+            transform: scale(0.8);
+            @media (min-width: 792px) {
+              transform: scale(1);
+            }
+            
             img {
-              width: 100%;
+              // width: 100%;
+              border-radius: 5px;
             }
           }
         }
@@ -641,6 +658,10 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 12px;
+      @media (min-width: 792px) {
+        padding: 32px;
+      }
       .mySwiper-photo {
         padding: 60px 34px 0px 34px;
 
@@ -876,7 +897,6 @@ body {
 
       .map {
         width: 700px;
-        height: 450px;
         margin: 0px 20px 0px 20px;
         transform: scale(0.4);
         @media (min-width: 490px) {

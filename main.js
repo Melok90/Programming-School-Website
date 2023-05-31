@@ -151,10 +151,6 @@ function init() {
     iconImageSize: [30, 30],
     iconImageOffset: [-10, -80],
 
-
-
-
-
   }),
   placemark_main.balloon.open;
     map.geoObjects.add(placemark_main);
