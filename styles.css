@@ -1194,7 +1194,7 @@ body {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 @media (min-width: 1090px) {
   .footer-container .footer-wrapper {
