@@ -906,7 +906,7 @@ body {
 }
 .training-wrapper-bg .photo-wrapper-section .section-swiper-text {
   margin-top: 30px;
-  padding: 0px 20px;
+  padding: 0px 20px 10px 20px;
 }
 @media (min-width: 960px) {
   .training-wrapper-bg .photo-wrapper-section .section-swiper-text {
@@ -931,13 +931,14 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: calc(16px + 6 * (100vw - 320px) / 1200);
-  line-height: 25px;
+  line-height: 18px;
   color: #f5deb3;
   margin-bottom: 5px;
 }
 @media (min-width: 1090px) {
   .training-wrapper-bg .photo-wrapper-section .section-swiper-text .swiper-text-wrapper .swiper-text__title {
     font-size: 22.5px;
+    line-height: 25px;
   }
 }
 .training-wrapper-bg .photo-wrapper-section .section-swiper-text .swiper-text-wrapper .swiper-text__subtitle {
@@ -945,12 +946,13 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: calc(14px + 4 * (100vw - 320px) / 1200);
-  line-height: 20px;
+  line-height: 14px;
   color: #ececec;
 }
 @media (min-width: 1090px) {
   .training-wrapper-bg .photo-wrapper-section .section-swiper-text .swiper-text-wrapper .swiper-text__subtitle {
     font-size: 18px;
+    line-height: 20px;
   }
 }
 
@@ -1032,7 +1034,7 @@ body {
   height: 40px;
   color: #f5deb3;
   padding: 10px;
-  font-size: calc(0.8em + 0.4 * (100vw - 320px) / 1200);
+  font-size: calc(0.9em + 0.4 * (100vw - 320px) / 1200);
 }
 @media (min-width: 790px) {
   .according-wrapper .according-wrapper-page .according-content .according-item button.accordion__btn {
