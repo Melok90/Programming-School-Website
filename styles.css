@@ -431,17 +431,12 @@ body {
   gap: 30px;
   padding: 9px 20px 16px 20px;
 }
-.our-materials .our-materials-container .block-training-materials .materials-cards__icon-container img {
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
+.our-materials .our-materials-container .block-training-materials .materials-cards__icon-container .icon__item {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
-.our-materials .our-materials-container .block-training-materials .materials-cards__icon-container img:hover {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
-}
-
 .swiper-news-wrapper {
   background-image: url("./img/backgrn_section_wrapper.svg");
   background-color: #313039;
@@ -494,9 +489,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  padding: 5px;
   max-width: 432px;
-  height: 98px;
   width: 80%;
   background: rgba(153, 138, 203, 0.3);
   -webkit-backdrop-filter: blur(11.25px);
@@ -508,6 +502,7 @@ body {
 @media (min-width: 430px) {
   .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item {
     height: 178px;
+    padding: 10px;
   }
 }
 @media (min-width: 792px) {
@@ -535,7 +530,7 @@ body {
   max-width: calc(200px + 130 * (100vw - 320px) / 1200);
   font-weight: 400;
   font-size: 14px;
-  line-height: 101.7%;
+  line-height: 103%;
   color: #ececec;
 }
 @media (min-width: 792px) {
@@ -547,14 +542,8 @@ body {
   }
 }
 .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item__image {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-@media (min-width: 792px) {
-  .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item__image {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+  min-width: 70px;
+  max-width: 75px;
 }
 .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item__image img {
   border-radius: 5px;

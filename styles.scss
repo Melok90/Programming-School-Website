@@ -351,13 +351,16 @@ body {
         justify-content: space-between;
         gap: 30px;
         padding: 9px 20px 16px 20px;
+        .icon__item {
+          transition: transform 2s;
+        }
 
         img {
-          transition-duration: 200ms;
+          // transition-duration: 200ms;
         }
         img:hover {
-          transform: scale(1.1, 1.1);
-          transition-duration: 200ms;
+          // transform: scale(1.1, 1.1);
+          // transition-duration: 200ms;
         }
       }
     }
@@ -399,9 +402,9 @@ body {
           cursor: pointer;
           display: flex;
           align-items: center;
-          padding: 10px;
+          padding: 5px;
           max-width: 432px;
-          height: 98px;
+          // height: 98px;
           width: 80%;
           background: rgba(153, 138, 203, 0.3);
           backdrop-filter: blur(11.25px);
@@ -409,6 +412,7 @@ body {
           transition-duration: 100ms;
           @media (min-width: 430px) {
             height: 178px;
+            padding: 10px;
           }
           @media (min-width: 792px) {
             width: 100%;
@@ -425,11 +429,10 @@ body {
             align-items: center;
             text-align: left;
             margin-left: 10px;
-            // max-width: 145px;
             max-width: calc(200px + 130 * ((100vw - 320px) / 1200));
             font-weight: 400;
             font-size: 14px;
-            line-height: 101.7%;
+            line-height: 103%;
             color: #ececec;
             @media (min-width: 792px) {
               width: 100%;
@@ -439,13 +442,12 @@ body {
             }
           }
           .slide-item__image {
-            transform: scale(0.8);
+            min-width: 70px;
+            max-width: 75px;
             @media (min-width: 792px) {
-              transform: scale(1);
             }
 
             img {
-              // width: 100%;
               border-radius: 5px;
             }
           }
@@ -473,7 +475,6 @@ body {
       display: flex;
     }
     .chart__item {
-      
       svg {
         path {
           cursor: pointer;
@@ -523,7 +524,6 @@ body {
         }
 
         .description__text {
-          
           font-family: "Share Tech Mono";
           font-style: normal;
           font-weight: 400;
@@ -786,7 +786,7 @@ body {
     border-radius: 15px;
 
     @media (min-width: 490px) {
-      padding: 16px 60px 30px 60px; 
+      padding: 16px 60px 30px 60px;
     }
     @media (min-width: 790px) {
       padding: 16px 130px 30px 130px;
@@ -820,11 +820,11 @@ body {
           padding: 5px;
           font-size: calc(0.9em + 0.4 * ((100vw - 320px) / 1200));
           @media (min-width: 475px) {
-            padding: 10px;}
-            
+            padding: 10px;
+          }
+
           @media (min-width: 790px) {
             font-size: 1.2em;
-            
           }
 
           &:active {
@@ -836,12 +836,10 @@ body {
           }
           p {
             max-width: 210px;
-            @media (min-width:790px) {
+            @media (min-width: 790px) {
               max-width: 630px;
-              
             }
           }
-          
         }
         .accordion__text {
           display: none;
@@ -878,15 +876,14 @@ body {
   background-size: contain;
 
   .map-location-wrapper {
-    
     display: flex;
     flex-direction: column;
-    
+
     padding-bottom: 0px;
     @media (min-width: 790px) {
       padding-bottom: 100px;
     }
-    
+
     .map-location-text-box-adress {
       margin-top: 10px;
       padding-bottom: 10px;
@@ -945,25 +942,18 @@ body {
         align-items: end;
       }
 
-      
-
       .map {
         width: 320px;
         height: 450px;
-        
-        
+
         @media (min-width: 490px) {
-         
         }
         @media (min-width: 790px) {
           width: 700px;
-          
         }
       }
       .map-content {
-        
         @media (min-width: 790px) {
-          
         }
       }
     }
@@ -990,15 +980,12 @@ body {
       padding: 43px 0px 61px 0px;
     }
     .melogi {
-      flex-grow:1;
-      
+      flex-grow: 1;
     }
   }
 
   .footer-block {
     max-width: 220px;
-    
-    
 
     .block-title {
       padding: 8px 0px;
