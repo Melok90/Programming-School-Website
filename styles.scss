@@ -779,7 +779,7 @@ body {
 
   .according-wrapper-page {
     max-width: 916px;
-    padding: 16px 20px 16px 20px;
+    padding: 16px 10px 16px 10px;
     width: 90%;
     background: rgba(217, 217, 217, 0.05);
     backdrop-filter: blur(11.25px);
@@ -968,7 +968,7 @@ body {
     font-family: "Share Tech Mono", monospace;
     max-width: 1200px;
     width: 100%;
-    padding: 43px 20px 61px 20px;
+    padding: 43px 20px 30px 20px;
     display: flex;
     margin: 0 auto;
     justify-content: space-evenly;
@@ -986,9 +986,10 @@ body {
 
   .footer-block {
     max-width: 220px;
+   
 
     .block-title {
-      padding: 8px 0px;
+      padding: 12px 0px;
       font-size: calc(18px + 8 * ((100vw - 320px) / 1200));
       margin-bottom: 20px;
       color: bisque;
@@ -1035,7 +1036,7 @@ body {
     }
 
     .item-block-payment {
-      width: 190px;
+      // width: 190px;
       border-radius: 5px;
       background-color: #443861;
       cursor: default;
