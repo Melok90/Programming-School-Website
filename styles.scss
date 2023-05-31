@@ -119,9 +119,9 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: calc(16px + 8 * ((100vw - 320px) / 1200));
-  // font-size: 1.5em;
   line-height: 20px;
   color: #ececec;
+  text-align: center;
   @media (min-width: 1090px) {
     line-height: 32px;
     font-size: 22px;
@@ -318,6 +318,7 @@ body {
       }
       .our-block__subtitle {
         margin-top: 16px;
+        text-align: left;
       }
     }
 
@@ -877,11 +878,18 @@ body {
   background-size: contain;
 
   .map-location-wrapper {
+    
     display: flex;
     flex-direction: column;
+    
     padding-bottom: 0px;
     @media (min-width: 790px) {
       padding-bottom: 100px;
+    }
+    
+    .map-location-text-box-adress {
+      margin-top: 10px;
+      padding-bottom: 10px;
     }
 
     .map-location {
@@ -937,10 +945,7 @@ body {
         align-items: end;
       }
 
-      .map-location-text-box {
-        padding:30px 30px;
-        
-      }
+      
 
       .map {
         width: 320px;
@@ -973,21 +978,27 @@ body {
     font-family: "Share Tech Mono", monospace;
     max-width: 1200px;
     width: 100%;
-    padding: 43px 10px 61px 10px;
+    padding: 43px 20px 61px 20px;
     display: flex;
     margin: 0 auto;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 
     @media (min-width: 1090px) {
       justify-content: space-between;
       padding: 43px 0px 61px 0px;
     }
+    .melogi {
+      flex-grow:1;
+      
+    }
   }
 
   .footer-block {
     max-width: 220px;
+    
+    
 
     .block-title {
       padding: 8px 0px;

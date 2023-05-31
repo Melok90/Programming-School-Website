@@ -146,6 +146,7 @@ body {
   font-size: calc(16px + 8 * (100vw - 320px) / 1200);
   line-height: 20px;
   color: #ececec;
+  text-align: center;
 }
 @media (min-width: 1090px) {
   .text__subtitle {
@@ -387,6 +388,7 @@ body {
 }
 .our-materials .our-materials-container .our-block-text .our-block__subtitle {
   margin-top: 16px;
+  text-align: left;
 }
 .our-materials .our-materials-container .block-training-materials {
   padding: 0px 32px 0px 32px;
@@ -1117,6 +1119,10 @@ body {
     padding-bottom: 100px;
   }
 }
+.footer-background .map-location-wrapper .map-location-text-box-adress {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
 .footer-background .map-location-wrapper .map-location {
   background-image: -webkit-gradient(linear, right top, left top, from(hsl(0deg, 0%, 45%)), color-stop(2%, hsl(273deg, 4%, 42%)), color-stop(6%, hsl(272deg, 8%, 38%)), color-stop(10%, hsl(271deg, 13%, 35%)), color-stop(16%, hsl(271deg, 19%, 32%)), color-stop(23%, hsl(270deg, 26%, 29%)), color-stop(31%, hsl(269deg, 35%, 25%)), color-stop(40%, hsl(264deg, 35%, 26%)), color-stop(49%, hsl(254deg, 27%, 29%)), color-stop(59%, hsl(239deg, 21%, 33%)), color-stop(69%, hsl(224deg, 23%, 35%)), color-stop(80%, hsl(211deg, 24%, 37%)), color-stop(90%, hsl(201deg, 27%, 38%)), to(hsl(192deg, 29%, 39%)));
   background-image: linear-gradient(270deg, hsl(0deg, 0%, 45%) 0%, hsl(273deg, 4%, 42%) 2%, hsl(272deg, 8%, 38%) 6%, hsl(271deg, 13%, 35%) 10%, hsl(271deg, 19%, 32%) 16%, hsl(270deg, 26%, 29%) 23%, hsl(269deg, 35%, 25%) 31%, hsl(264deg, 35%, 26%) 40%, hsl(254deg, 27%, 29%) 49%, hsl(239deg, 21%, 33%) 59%, hsl(224deg, 23%, 35%) 69%, hsl(211deg, 24%, 37%) 80%, hsl(201deg, 27%, 38%) 90%, hsl(192deg, 29%, 39%) 100%);
@@ -1173,9 +1179,6 @@ body {
             align-items: end;
   }
 }
-.footer-background .map-location-wrapper .map-wrapper .map-location-text-box {
-  padding: 30px 30px;
-}
 .footer-background .map-location-wrapper .map-wrapper .map {
   width: 320px;
   height: 450px;
@@ -1192,7 +1195,7 @@ body {
   font-family: "Share Tech Mono", monospace;
   max-width: 1200px;
   width: 100%;
-  padding: 43px 10px 61px 10px;
+  padding: 43px 20px 61px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1202,7 +1205,7 @@ body {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 @media (min-width: 1090px) {
   .footer-container .footer-wrapper {
@@ -1211,6 +1214,11 @@ body {
             justify-content: space-between;
     padding: 43px 0px 61px 0px;
   }
+}
+.footer-container .footer-wrapper .melogi {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .footer-container .footer-block {
   max-width: 220px;
