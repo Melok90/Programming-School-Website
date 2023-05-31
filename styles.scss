@@ -8,7 +8,7 @@
 }
 @media screen and (min-width: 1140px) {
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
 }
 
 body {
@@ -30,23 +30,63 @@ body {
   margin: 0 auto;
 
   .header-wrapper {
-    padding: 70px 50px 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transform: scale(0.9);
+
+    @media (min-width: 590px) {
+      display: block;
+      padding: 30px;
+    }
+
+    @media (min-width: 792px) {
+      padding: 70px 50px 40px 50px;
+      transform: scale(1);
+    }
+    .header-logo-item {
+      display: flex;
+      justify-content: left;
+    }
 
     .navigation-section {
       display: flex;
       justify-content: space-between;
 
       .header-wrapper__button {
-        display: flex;
+        display: none;
         flex-direction: column;
+
+        @media (min-width: 992px) {
+          display: flex;
+        }
       }
       .navigation-section__list {
-        margin-top: 69px;
+        margin-top: 0px;
         display: flex;
+        @media (min-width: 590px) {
+          margin-top: 29px;
+        }
+
+        @media (min-width: 992px) {
+          margin-top: 69px;
+        }
+
+        .navigation-popup {
+          cursor: pointer;
+        }
       }
       .navigation-section__item {
-        margin-left: 60px;
+        margin-left: 40px;
+        display: none;
 
+        @media (min-width: 992px) {
+          margin-left: 60px;
+        }
+        @media (min-width: 590px) {
+          display: block;
+        }
         a {
           cursor: pointer;
         }
@@ -62,11 +102,14 @@ body {
   font-family: "Share Tech Mono";
   font-style: normal;
   font-weight: 400;
-  // font-size: 54px;
-  font-size: 3.4em;
-  line-height: 74px;
+  font-size: calc(28px + 26 * ((100vw - 320px) / 1200));
+  line-height: calc(40px + 34 * ((100vw - 320px) / 1200));
   text-align: center;
   color: #f5deb3;
+  @media (min-width: 1090px) {
+    font-size: 54px;
+    line-height: 74px;
+  }
 }
 .text-color {
   color: #f5deb3;
@@ -75,20 +118,28 @@ body {
   font-family: "Share Tech Mono";
   font-style: normal;
   font-weight: 400;
-  // font-size: 22px;
-  font-size: 1.5em;
-  line-height: 32px;
+  font-size: calc(16px + 8 * ((100vw - 320px) / 1200));
+  // font-size: 1.5em;
+  line-height: 20px;
   color: #ececec;
+  @media (min-width: 1090px) {
+    line-height: 32px;
+    font-size: 22px;
+  }
 }
 .text__subtitle_large {
   font-family: "Share Tech Mono";
   font-style: normal;
   font-weight: 400;
-  font-size: 2em;
-  ////font:32px///
-  line-height: 45px;
+  font-size: calc(18px + 14 * ((100vw - 320px) / 1200));
+  line-height: 30px;
   text-align: center;
   color: #ececec;
+
+  @media (min-width: 1090px) {
+    font-size: 32px;
+    line-height: 45px;
+  }
 }
 
 .item-block-logo {
@@ -129,21 +180,39 @@ body {
 ///////////title/////////
 
 .about-us-wrapper {
-  margin-top: 44px;
-  padding-top: 40px;
-  padding-bottom: 185px;
+  margin-top: 24px;
+  padding: 20px 0px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 992px) {
+    padding: 40px 0px 185px 0px;
+    margin-top: 44px;
+  }
 
   .about-us-block {
     margin: 0 auto;
     max-width: 757px;
+    height: 240px;
+
     .about-us-block__title {
-      height: 222px;
+      padding: 10px 20px;
       letter-spacing: -0.06em;
+      max-width: 500px;
+      @media (min-width: 1090px) {
+        max-width: 800px;
+      }
     }
   }
   .about-us-block__subtitle {
     max-width: 600px;
     margin: 0 auto;
+    padding: 0px 20px;
+    display: none;
+    @media (min-width: 470px) {
+      display: block;
+    }
   }
 
   .input-subscription {
@@ -152,11 +221,20 @@ body {
     margin: 0 auto;
     font-family: inherit;
     max-width: 742px;
-    margin-top: 50px;
-    padding: 30px 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 20px 15px;
     background: rgba(82, 88, 102, 0.9);
     border-radius: 30px;
-    margin-bottom: 50px;
+
+    transform: scale(0.8);
+
+    @media (min-width: 992px) {
+      transform: scale(1);
+      padding: 30px 40px;
+      margin: 20px 0px 50px 0px;
+      margin-top: 50px;
+    }
+
     .input-field-container {
       width: 100%;
       .input__field {
@@ -191,33 +269,42 @@ body {
   background-image: url("./img/maskgroup_our_bk.svg");
   background-repeat: no-repeat;
   background-position: bottom;
+  background-size: contain;
 
   .our-materials-container {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     margin-top: -37px;
     margin-bottom: -35px;
-    margin-left: 63px;
-    padding: 50px 42px 50px 42px;
+    margin-left: 0px;
+    padding: 20px 5px 20px 5px;
     max-width: 1440px;
-
-    // height: 608px;
     background: rgba(118, 118, 118, 0.2);
     backdrop-filter: blur(7.5px);
     border-radius: 20px;
 
+    @media (min-width: 792px) {
+      flex-direction: row;
+      padding: 50px 42px 50px 42px;
+    }
+
     .our-block-text {
       max-width: 588px;
-      width: 50%;
-      // max-height: 376px;
-      padding: 0px 60px 0px 0px;
+      width: 70%;
+      padding: 0px 10px 30px 0px;
+      border-right: none;
 
+      @media (min-width: 790px) {
+        padding: 0px 60px 30px 0px;
+        margin-left: 63px;
+        border-right: 3px solid #ececec;
+      }
       @media (min-width: 1200px) {
         padding: 0px 156px 0px 0px;
         width: 100%;
       }
-
-      border-right: 3px solid #ececec;
 
       .our-block__title {
         text-align: left;
@@ -228,14 +315,19 @@ body {
     }
 
     .block-training-materials {
-      padding: 0px 72px 0px 72px;
+      padding: 0px 32px 0px 32px;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 15px;
+
+      @media (min-width: 1090px) {
+        padding: 0px 72px 0px 72px;
+        gap: 30px;
+      }
       .training-materials-cards {
         max-width: 304px;
         width: 100%;
-        height: 112px;
+        // height: 112px;
         background: rgba(153, 138, 203, 0.5);
         box-shadow: 1.5px 3px 22.5px rgba(0, 0, 0, 0.25);
         border-radius: 15px;
@@ -250,7 +342,7 @@ body {
         display: flex;
         justify-content: space-between;
         gap: 30px;
-        padding: 9px 20px 7px 20px;
+        padding: 9px 20px 16px 20px;
 
         img {
           transition-duration: 200ms;
@@ -267,14 +359,21 @@ body {
   background-image: url("./img/backgrn_section_wrapper.svg");
   background-color: #313039;
   background-position: center;
-  padding-top: 100px;
-  // max-width: 1960px;
+  background-size: contain;
+  padding-top: 40px;
+  @media (min-width: 792px) {
+    padding-top: 100px;
+  }
 
   .swiper {
-    margin-top: 30px;
-    padding: 20px 0px 50px 0px;
+    margin-top: 10px;
+    padding: 10px 0px 20px 0px;
     width: 100%;
     height: 100%;
+    @media (min-width: 792px) {
+      margin-top: 30px;
+      padding: 20px 0px 50px 0px;
+    }
     .swiper-wrapper {
       .swiper-slide {
         text-align: center;
@@ -285,13 +384,23 @@ body {
         .slide-item {
           cursor: pointer;
           display: flex;
-          padding: 22.5px;
+          padding: 10px;
           max-width: 432px;
-          width: 100%;
+          height: 98px;
+          width: 80%;
           background: rgba(153, 138, 203, 0.3);
           backdrop-filter: blur(11.25px);
           border-radius: 7.5px;
           transition-duration: 100ms;
+          @media (min-width: 430px) {
+            height: 178px;
+          }
+          @media (min-width: 792px) {
+            width: 100%;
+            padding: 22.5px;
+            height: 178px;
+          }
+
           &:hover {
             transition-duration: 100ms;
             transform: scale(1.02, 1.05);
@@ -300,12 +409,18 @@ body {
             display: flex;
             align-items: center;
             text-align: left;
-            margin-left: 22.5px;
-            max-width: 230px;
+            margin-left: 10px;
+            max-width: 145px;
             font-weight: 400;
-            font-size: 24px;
+            font-size: 14px;
             line-height: 101.7%;
             color: #ececec;
+            @media (min-width: 792px) {
+              width: 100%;
+              font-size: 24px;
+              margin-left: 22.5px;
+              max-width: 230px;
+            }
           }
           .slide-item__image {
             img {
@@ -320,6 +435,7 @@ body {
 .chart-wrapper {
   .chart-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     .chart__item {
@@ -355,7 +471,6 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-    
 
       .description-item {
         cursor: pointer;
@@ -367,7 +482,6 @@ body {
           margin-bottom: 0px;
         }
 
-      
         .description__text {
           font-family: "Share Tech Mono";
           font-style: normal;
@@ -383,7 +497,7 @@ body {
       }
     }
     .chart__description-2 {
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       max-width: 432px;
@@ -392,6 +506,10 @@ body {
       background: rgba(238, 238, 239, 0.1);
       backdrop-filter: blur(11.25px);
       border-radius: 15px;
+
+      @media (min-width: 490px) {
+        display: flex;
+      }
     }
   }
 }
@@ -399,13 +517,20 @@ body {
 .training-wrapper-bg {
   background-image: url("./img/backgrn_section_wrapper_two.svg");
   background-color: #313039;
-  // background-repeat: no-repeat;
   background-position: top;
-  // background-size: cover;
+  background-size: contain;
   .training-wrapper {
-    padding: 0px 58px;
+    padding: 0px 28px;
+
+    @media (min-width: 792px) {
+      padding: 0px 58px;
+    }
     .training-title {
-      padding-top: 76px;
+      padding-top: 36px;
+
+      @media (min-width: 792px) {
+        padding-top: 76px;
+      }
 
       .training__subtitle {
         padding-top: 14px;
@@ -417,9 +542,10 @@ body {
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 10px;
       @media (min-width: 960px) {
         justify-content: space-between;
+        gap: 30px;
       }
     }
     .training-wrapper-cards-group-2 {
@@ -434,6 +560,11 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transform: scale(0.8);
+
+        @media (min-width: 792px) {
+          transform: scale(1);
+        }
 
         .card__image {
           margin-bottom: -25px;
@@ -490,16 +621,21 @@ body {
       font-family: "Share Tech Mono";
       font-style: normal;
       font-weight: 400;
-      font-size: 32px;
+      font-size: calc(20px + 16 * ((100vw - 320px) / 1200));
       line-height: 114.5%;
       max-width: 640px;
       text-align: center;
       color: #ececec;
+
+      @media (min-width: 792px) {
+        font-size: 32px;
+      }
     }
   }
   .photo-wrapper-section {
     margin-top: 76px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     .section-swiper-photo {
       display: flex;
@@ -528,9 +664,18 @@ body {
       }
     }
     .section-swiper-text {
+      margin-top: 30px;
+      padding: 0px 20px;
+      @media (min-width: 960px) {
+        margin-top: 0px;
+        padding: 0px;
+      }
       .swiper-text-wrapper {
         max-width: 456px;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
+        @media (min-width: 1090px) {
+          margin-bottom: 25px;
+        }
         &:last-child {
           margin-bottom: 0px;
         }
@@ -538,18 +683,24 @@ body {
           font-family: "Share Tech Mono";
           font-style: normal;
           font-weight: 400;
-          font-size: 22.5px;
+          font-size: calc(16px + 6 * ((100vw - 320px) / 1200));
           line-height: 25px;
           color: #f5deb3;
           margin-bottom: 5px;
+          @media (min-width: 1090px) {
+            font-size: 22.5px;
+          }
         }
         .swiper-text__subtitle {
           font-family: "Share Tech Mono";
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
+          font-size: calc(14px + 4 * ((100vw - 320px) / 1200));
           line-height: 20px;
           color: #ececec;
+          @media (min-width: 1090px) {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -559,28 +710,45 @@ body {
   background-image: url("./img/backgrn_section_wrapper.svg");
   background-color: #313039;
   background-position: top;
+  background-size: contain;
 }
 .according-wrapper {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding: 24px 0px 24px 0px;
   display: flex;
   justify-content: center;
+  @media (min-width: 790px) {
+    padding: 64px 0px 64px 0px;
+  }
 
   .according-wrapper-page {
     max-width: 916px;
-    padding: 16px 130px 30px 130px;
-    width: 100%;
-    max-height: 700px;
+    padding: 16px 20px 30px 20px;
+    width: 90%;
+    height: 460px;
     background: rgba(217, 217, 217, 0.05);
     backdrop-filter: blur(11.25px);
     border-radius: 15px;
 
+    @media (min-width: 490px) {
+      padding: 16px 60px 30px 60px;
+      height: 620px;
+    }
+    @media (min-width: 790px) {
+      padding: 16px 130px 30px 130px;
+      width: 100%;
+    }
+
     .according-content {
       margin-top: 30px;
-      margin-bottom: 200px;
-
+      padding-bottom: 140px;
+      @media (min-width: 790px) {
+        padding-bottom: 200px;
+      }
       .according-item {
-        padding: 10px;
+        padding: 5px;
+        @media (min-width: 790px) {
+          padding: 10px;
+        }
 
         button.accordion__btn {
           display: flex;
@@ -594,7 +762,10 @@ body {
           height: 40px;
           color: #f5deb3;
           padding: 10px;
-          font-size: 1.2em;
+          font-size: calc(0.8em + 0.4 * ((100vw - 320px) / 1200));
+          @media (min-width: 790px) {
+            font-size: 1.2em;
+          }
 
           &:active {
             background-color: #252525;
@@ -608,8 +779,17 @@ body {
           display: none;
           font-size: 1.2em;
           margin: 10px;
-          line-height: 25px;
+          max-height: 100px;
+          overflow: scroll;
+          line-height: calc(16px + 9 * ((100vw - 320px) / 1200));
           color: #ececec;
+          font-size: calc(0.8em + 0.4 * ((100vw - 320px) / 1200));
+          @media (min-width: 790px) {
+            font-size: 1.2em;
+            line-height: 25px;
+            max-height: 200px;
+            overflow: visible;
+          }
         }
         .accordion__text.show {
           display: block;
@@ -628,32 +808,33 @@ body {
   background-color: #313039;
   background-position: top;
   background-size: contain;
-  
+
   .map-location-wrapper {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items:baseline;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
+    @media (min-width: 790px) {
+      padding-bottom: 100px;
+    }
 
     .map-location {
       background-image: linear-gradient(
-  270deg,
-  hsl(0deg 0% 45%) 0%,
-  hsl(273deg 4% 42%) 2%,
-  hsl(272deg 8% 38%) 6%,
-  hsl(271deg 13% 35%) 10%,
-  hsl(271deg 19% 32%) 16%,
-  hsl(270deg 26% 29%) 23%,
-  hsl(269deg 35% 25%) 31%,
-  hsl(264deg 35% 26%) 40%,
-  hsl(254deg 27% 29%) 49%,
-  hsl(239deg 21% 33%) 59%,
-  hsl(224deg 23% 35%) 69%,
-  hsl(211deg 24% 37%) 80%,
-  hsl(201deg 27% 38%) 90%,
-  hsl(192deg 29% 39%) 100%
-);
+        270deg,
+        hsl(0deg 0% 45%) 0%,
+        hsl(273deg 4% 42%) 2%,
+        hsl(272deg 8% 38%) 6%,
+        hsl(271deg 13% 35%) 10%,
+        hsl(271deg 19% 32%) 16%,
+        hsl(270deg 26% 29%) 23%,
+        hsl(269deg 35% 25%) 31%,
+        hsl(264deg 35% 26%) 40%,
+        hsl(254deg 27% 29%) 49%,
+        hsl(239deg 21% 33%) 59%,
+        hsl(224deg 23% 35%) 69%,
+        hsl(211deg 24% 37%) 80%,
+        hsl(201deg 27% 38%) 90%,
+        hsl(192deg 29% 39%) 100%
+      );
       border-radius: 20px 0px 0px 20px;
       max-width: 975px;
       width: 100%;
@@ -661,22 +842,34 @@ body {
       margin-right: -700px;
       // z-index: 1;
       transform: scale(0.8);
-        @media (min-width: 790px) {
-          transform: scale(1);
-        }
+      display: none;
+      @media (min-width: 960px) {
+        display: block;
+      }
+      @media (min-width: 790px) {
+        transform: scale(1);
+      }
 
-        .location-text {
-          text-align: start;
-          padding: 20px;
-          max-width: 200px;
-        }
+      .location-text {
+        text-align: start;
+        padding: 20px;
+        max-width: 200px;
+      }
     }
     .map-wrapper {
       display: flex;
-      justify-content: end;
-      align-items: end;
-      margin-top: 56px;
-      
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      @media (min-width: 790px) {
+        margin: 20px;
+        margin-top: 56px;
+      }
+      @media (min-width: 960px) {
+        justify-content: end;
+        align-items: end;
+      }
+
       .map-location-text-box {
         padding-bottom: 20px;
       }
@@ -684,9 +877,19 @@ body {
       .map {
         width: 700px;
         height: 450px;
-        transform: scale(0.8);
+        margin: 0px 20px 0px 20px;
+        transform: scale(0.4);
+        @media (min-width: 490px) {
+          transform: scale(0.8);
+        }
         @media (min-width: 790px) {
           transform: scale(1);
+        }
+      }
+      .map-content {
+        padding: 0px 20px 0px 20px;
+        @media (min-width: 790px) {
+          padding: 0px 20px 0px 20px;
         }
       }
     }
@@ -701,10 +904,17 @@ body {
     font-family: "Share Tech Mono", monospace;
     max-width: 1200px;
     width: 100%;
-    padding: 43px 0px 61px 0px;
+    padding: 43px 10px 61px 10px;
     display: flex;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (min-width: 1090px) {
+      justify-content: space-between;
+      padding: 43px 0px 61px 0px;
+    }
   }
 
   .footer-block {
@@ -712,17 +922,25 @@ body {
 
     .block-title {
       padding: 8px 0px;
-      font-size: 26px;
+      font-size: calc(18px + 8 * ((100vw - 320px) / 1200));
       margin-bottom: 20px;
       color: bisque;
+
+      @media (min-width: 790px) {
+        font-size: 26px;
+      }
     }
 
     a {
       display: block;
       text-decoration: none;
-      font-size: 18px;
-      padding: 8px 0px;
+      font-size: calc(14px + 4 * ((100vw - 320px) / 1200));
+      padding: 6px 0px;
       color: #998acb;
+      @media (min-width: 790px) {
+        font-size: 18px;
+        padding: 8px 0px;
+      }
     }
 
     a:hover {
@@ -732,9 +950,12 @@ body {
     .item-block-social {
       max-width: 160px;
       height: 30px;
-      margin: 50px 0px;
+      margin: 24px 0px;
       display: flex;
       justify-content: space-between;
+      @media (min-width: 790px) {
+        margin: 50px 0px;
+      }
 
       .footer-logo-icon:hover svg path {
         fill: bisque;
@@ -785,6 +1006,11 @@ body {
     max-width: 300px;
     padding: 20px;
     border-radius: 5px;
+    display: none;
+
+    @media (min-width: 1090px) {
+      display: block;
+    }
 
     .send-title {
       font-size: 26px;
@@ -837,12 +1063,17 @@ body {
   .links-transform {
     .support-links {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       padding-bottom: 20px;
     }
     .support-links:hover {
       color: bisque;
       transition: fill 0.2s;
+    }
+    .support-item {
+      display: flex;
+      flex-wrap: wrap;
     }
     .support-item:hover svg path {
       fill: bisque;
