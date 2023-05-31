@@ -164,13 +164,17 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  width: 176px;
+  width: 106px;
   height: 38px;
   border-radius: 30px;
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.04em;
   cursor: pointer;
+  @media (min-width:490px) {
+    width: 176px;
+  }
+
   &.button-send:hover {
     background-color: #eeeeee;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);

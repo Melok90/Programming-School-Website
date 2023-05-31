@@ -200,13 +200,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #ffffff;
-  width: 176px;
+  width: 106px;
   height: 38px;
   border-radius: 30px;
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.04em;
   cursor: pointer;
+}
+@media (min-width: 490px) {
+  .button-send {
+    width: 176px;
+  }
 }
 .button-send.button-send:hover {
   background-color: #eeeeee;
