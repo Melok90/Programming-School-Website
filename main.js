@@ -166,52 +166,49 @@ ymaps.ready(init);
 
 //////icon transform///////
 
-document.addEventListener("DOMContentLoaded", () => {
-  const icons = document.getElementsByClassName('icon__item');
-  let scale = 1;
-  let increment = 0.1;
-  const maxScale = 1.1; 
-  
-
-  const interval = setInterval(() => {
-    for (let i = 0; i < icons.length; i++) {
-      const icon = icons[i];
-      icon.style.transform = `scale(${scale})`;
-    
-    }
-
-    scale += increment;
-
-    if (scale >= maxScale || scale <= 1) {
-      increment = -increment;
-    }
-  }, 1500);
-});
-
-
-
-
-
 // document.addEventListener("DOMContentLoaded", () => {
 //   const icons = document.getElementsByClassName('icon__item');
+//   let scale = 1;
 //   let increment = 0.1;
-//   const maxScale = 1.1;
-//   let rotation = 0;
+//   const maxScale = 1.1; 
+  
 
 //   const interval = setInterval(() => {
 //     for (let i = 0; i < icons.length; i++) {
 //       const icon = icons[i];
-//       icon.style.transform = `rotate(${rotation}deg)`;
-//       rotation += 2;
-//       if (rotation === 4) {
-//         rotation = 0;
-//       }
+//       icon.style.transform = `scale(${scale})`;
+    
 //     }
 
-//     if (increment > 0 && rotation === 0) {
-//       increment = -increment;
-//     } else if (increment < 0 && rotation === 2) {
+//     scale += increment;
+
+//     if (scale >= maxScale || scale <= 1) {
 //       increment = -increment;
 //     }
 //   }, 1500);
 // });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const icons = document.getElementsByClassName('icon__item');
+  let increment = 0.1;
+  const maxScale = 1.1;
+  let rotation = 0;
+
+  const interval = setInterval(() => {
+    for (let i = 0; i < icons.length; i++) {
+      const icon = icons[i];
+      icon.style.transform = `rotate(${rotation}deg)`;
+      rotation += 2;
+      if (rotation === 4) {
+        rotation = 0;
+      }
+    }
+
+    if (increment > 0 && rotation === 0) {
+      increment = -increment;
+    } else if (increment < 0 && rotation === 2) {
+      increment = -increment;
+    }
+  }, 1000);
+});
