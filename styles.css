@@ -564,6 +564,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 20px;
+}
+@media (min-width: 790px) {
+  .chart-wrapper .chart-box {
+    padding-bottom: 0px;
+  }
 }
 .chart-wrapper .chart-box .chart__item svg path {
   cursor: pointer;
@@ -619,7 +625,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+@media (min-width: 490px) {
+  .chart-wrapper .chart-box .chart__description .description-item {
+    margin-bottom: 20px;
+  }
 }
 .chart-wrapper .chart-box .chart__description .description-item:last-child {
   margin-bottom: 0px;
@@ -628,10 +639,16 @@ body {
   font-family: "Share Tech Mono";
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 14px;
   color: #ececec;
   margin-left: 14px;
+}
+@media (min-width: 790px) {
+  .chart-wrapper .chart-box .chart__description .description-item .description__text {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 .chart-wrapper .chart-box .chart__description .description-item .description__text:hover {
   color: #ffffff;
