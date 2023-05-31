@@ -897,7 +897,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 0px;
       @media (min-width: 790px) {
         margin: 20px;
         margin-top: 56px;
@@ -912,20 +912,22 @@ body {
       }
 
       .map {
-        width: 700px;
+        width: 300px;
+        height: 450px;
         margin: 0px 20px 0px 20px;
-        transform: scale(0.4);
+        transform: scale(0.7);
         @media (min-width: 490px) {
           transform: scale(0.8);
         }
         @media (min-width: 790px) {
           transform: scale(1);
+          width: 700px;
         }
       }
       .map-content {
-        padding: 0px 20px 0px 20px;
+        // padding: 0px 20px 0px 20px;
         @media (min-width: 790px) {
-          padding: 0px 20px 0px 20px;
+          // padding: 0px 20px 0px 20px;
         }
       }
     }
