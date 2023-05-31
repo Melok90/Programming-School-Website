@@ -559,6 +559,8 @@ body {
 }
 
 .chart-wrapper .chart-box {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,7 +576,14 @@ body {
 @media (min-width: 790px) {
   .chart-wrapper .chart-box {
     padding-bottom: 0px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
+}
+.chart-wrapper .chart-box .chart-box_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .chart-wrapper .chart-box .chart__item svg path {
   cursor: pointer;
@@ -619,8 +628,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .chart-wrapper .chart-box .chart__description .description-item {
   cursor: pointer;
@@ -659,7 +669,6 @@ body {
   color: #ffffff;
 }
 .chart-wrapper .chart-box .chart__description-2 {
-  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -674,14 +683,6 @@ body {
           backdrop-filter: blur(11.25px);
   border-radius: 15px;
 }
-@media (min-width: 490px) {
-  .chart-wrapper .chart-box .chart__description-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 .training-wrapper-bg {
   background-image: url("./img/backgrn_section_wrapper_two.svg");
   background-color: #313039;
@@ -847,6 +848,7 @@ body {
 }
 .training-wrapper-bg .photo-wrapper-section {
   margin-top: 76px;
+  padding-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -947,12 +949,16 @@ body {
   font-weight: 400;
   font-size: calc(14px + 4 * (100vw - 320px) / 1200);
   line-height: 14px;
+  border-bottom: 1px solid rgba(236, 236, 236, 0.537254902);
+  padding-bottom: 5px;
   color: #ececec;
 }
 @media (min-width: 1090px) {
   .training-wrapper-bg .photo-wrapper-section .section-swiper-text .swiper-text-wrapper .swiper-text__subtitle {
     font-size: 18px;
     line-height: 20px;
+    border-bottom: none;
+    padding-bottom: 0px;
   }
 }
 
@@ -1155,22 +1161,12 @@ body {
   padding-bottom: 20px;
 }
 .footer-background .map-location-wrapper .map-wrapper .map {
-  width: 300px;
+  width: 326px;
   height: 450px;
   margin: 0px 20px 0px 20px;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-}
-@media (min-width: 490px) {
-  .footer-background .map-location-wrapper .map-wrapper .map {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-  }
 }
 @media (min-width: 790px) {
   .footer-background .map-location-wrapper .map-wrapper .map {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     width: 700px;
   }
 }

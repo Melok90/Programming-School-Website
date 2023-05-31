@@ -171,7 +171,7 @@ body {
   font-size: 20px;
   letter-spacing: 0.04em;
   cursor: pointer;
-  @media (min-width:490px) {
+  @media (min-width: 490px) {
     width: 176px;
   }
 
@@ -201,7 +201,7 @@ body {
     height: 190px;
     @media (min-width: 790px) {
       height: 240px;
-      }
+    }
 
     .about-us-block__title {
       padding: 10px 20px;
@@ -442,7 +442,7 @@ body {
             @media (min-width: 792px) {
               transform: scale(1);
             }
-            
+
             img {
               // width: 100%;
               border-radius: 5px;
@@ -454,7 +454,10 @@ body {
   }
 }
 .chart-wrapper {
+  // display: flex;
+  // flex-wrap: wrap;
   .chart-box {
+    transform: scale(0.8);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -462,8 +465,13 @@ body {
     padding-bottom: 20px;
     @media (min-width: 790px) {
       padding-bottom: 0px;
+      transform: scale(1);
+    }
+    .chart-box_2 {
+      display: flex;
     }
     .chart__item {
+      
       svg {
         path {
           cursor: pointer;
@@ -495,7 +503,7 @@ body {
     .chart__description {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content:space-evenly;
 
       .description-item {
         cursor: pointer;
@@ -503,7 +511,7 @@ body {
         align-items: center;
         margin-bottom: 10px;
 
-        @media (min-width:490px) {
+        @media (min-width: 490px) {
           margin-bottom: 20px;
         }
 
@@ -530,7 +538,7 @@ body {
       }
     }
     .chart__description-2 {
-      display: none;
+      // display: none;
       justify-content: center;
       align-items: center;
       max-width: 432px;
@@ -541,7 +549,7 @@ body {
       border-radius: 15px;
 
       @media (min-width: 490px) {
-        display: flex;
+        // display: flex;
       }
     }
   }
@@ -667,6 +675,7 @@ body {
   }
   .photo-wrapper-section {
     margin-top: 76px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -735,10 +744,14 @@ body {
           font-weight: 400;
           font-size: calc(14px + 4 * ((100vw - 320px) / 1200));
           line-height: 14px;
+          border-bottom: 1px solid #ececec89;
+          padding-bottom: 5px;
           color: #ececec;
           @media (min-width: 1090px) {
             font-size: 18px;
             line-height: 20px;
+            border-bottom: none;
+            padding-bottom: 0px;
           }
         }
       }
@@ -914,16 +927,18 @@ body {
       }
 
       .map {
-        width: 300px;
+        width: 326px;
+      //  overflow: hidden;
         height: 450px;
         margin: 0px 20px 0px 20px;
-        transform: scale(0.7);
+        // transform: scale(0.7);
         @media (min-width: 490px) {
-          transform: scale(0.8);
+          // transform: scale(0.8);
         }
         @media (min-width: 790px) {
-          transform: scale(1);
+          // transform: scale(1);
           width: 700px;
+          
         }
       }
       .map-content {
