@@ -28,11 +28,32 @@
         <nav class="navigation-section">
           <div class="navigation-section__list">
             <div class="navigation-popup">
-              <svg width="42" height="22" viewBox="0 0 42 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="1" x2="42" y2="1" stroke="#ECECEC" stroke-width="2" />
-                <line y1="21" x2="42" y2="21" stroke="#ECECEC" stroke-width="2" />
-                <line y1="11" x2="42" y2="11" stroke="#ECECEC" stroke-width="2" />
-              </svg>
+              <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+
+                  <ul id="menu">
+                    <a href="#" class = "menu-item">
+                      <li>Home</li>
+                    </a>
+                    <a href="#" class = "menu-item">
+                      <li>About</li>
+                    </a>
+                    <a href="#" class = "menu-item">
+                      <li>Info</li>
+                    </a>
+                    <a href="#" class = "menu-item">
+                      <li>Contact</li>
+                    </a>
+                    <a href="#" class = "menu-item">
+                      <li>Show me more</li>
+                    </a>
+                  </ul>
+                </div>
+              </nav>
 
             </div>
             <div class="navigation-section__item text__subtitle">
@@ -42,10 +63,10 @@
               <a href="#">Features</a>
             </div>
             <div class="navigation-section__item text__subtitle">
-              <a href="#">About</a>
+              <a href="#">News</a>
             </div>
             <div class="navigation-section__item text__subtitle">
-              <a href="#">Steps</a>
+              <a href="#training-wrapper">Steps</a>
             </div>
           </div>
 
@@ -107,7 +128,7 @@
             training materials
           </div>
           <div class="materials-cards__icon-container">
-            <div class="icon__item" id ="icon__item">
+            <div class="icon__item" id="icon__item">
               <a href="">
                 <img src="./img/icon_pc.svg" alt="">
               </a>
@@ -194,7 +215,7 @@
             </div>
             <div class="slide-item__text">
               Revolution in Quantum Computing
-              
+
             </div>
           </div>
         </div>
@@ -245,82 +266,82 @@
     <div class="chart-wrapper container">
       <div class="chart-box">
         <div class="chart-box_2">
-        <div class="chart__item">
-          <svg width="244" height="244" viewBox="0 0 294 294" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="piece-5"
-              d="M176.458 164.505L146.875 215.767L137.024 232.864L127.172 249.932L117.264 267.028C108.415 261.902 100.196 255.602 92.7786 248.185C85.3614 240.768 79.0611 232.549 73.935 223.699C63.6254 205.915 58.127 185.64 58.127 164.505H176.458Z"
-              fill="#4D7E64" />
-            <path class="piece-4"
-              d="M255.325 164.505C255.325 178.595 251.66 192.112 244.787 203.968C241.379 209.868 237.169 215.337 232.215 220.292C227.26 225.246 221.791 229.456 215.891 232.864L206.04 215.767L176.457 164.505L227.719 134.923L244.815 125.071C251.688 136.927 255.325 150.444 255.325 164.505Z"
-              fill="#BC9C49" />
-            <path class="piece-3"
-              d="M225.773 249.932C210.938 258.523 194.042 263.105 176.459 263.105C158.875 263.105 141.979 258.523 127.145 249.932L136.996 232.864L146.876 215.767L176.459 164.505L206.041 215.767L215.893 232.864L225.773 249.932Z"
-              fill="#E4E4E4" fill-opacity="0.87" />
-            <path class="piece-2"
-              d="M236.583 130.046L176.572 164.692V95.4004C188.943 95.4004 200.811 98.6201 211.204 104.657C216.367 107.642 221.195 111.365 225.52 115.691C229.878 120.051 233.566 124.881 236.583 130.046Z"
-              fill="#437AAC" />
-            <path class="piece-1"
-              d="M176.458 26.4717V164.505H38.4238C38.4238 139.361 45.1537 115.793 56.8951 95.4599C69.0089 74.4971 86.4779 57.0281 107.441 44.9144C127.716 33.2015 151.314 26.4717 176.458 26.4717Z"
-              fill="#6C4380" />
-          </svg>
-        </div>
-        <div class="chart__description">
-          <div class="description-item">
-            <div class="description__image">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="7" fill="#6C4380" />
-              </svg>
-            </div>
-            <div class="description__text">
-              Medicine
-            </div>
+          <div class="chart__item">
+            <svg width="244" height="244" viewBox="0 0 294 294" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="piece-5"
+                d="M176.458 164.505L146.875 215.767L137.024 232.864L127.172 249.932L117.264 267.028C108.415 261.902 100.196 255.602 92.7786 248.185C85.3614 240.768 79.0611 232.549 73.935 223.699C63.6254 205.915 58.127 185.64 58.127 164.505H176.458Z"
+                fill="#4D7E64" />
+              <path class="piece-4"
+                d="M255.325 164.505C255.325 178.595 251.66 192.112 244.787 203.968C241.379 209.868 237.169 215.337 232.215 220.292C227.26 225.246 221.791 229.456 215.891 232.864L206.04 215.767L176.457 164.505L227.719 134.923L244.815 125.071C251.688 136.927 255.325 150.444 255.325 164.505Z"
+                fill="#BC9C49" />
+              <path class="piece-3"
+                d="M225.773 249.932C210.938 258.523 194.042 263.105 176.459 263.105C158.875 263.105 141.979 258.523 127.145 249.932L136.996 232.864L146.876 215.767L176.459 164.505L206.041 215.767L215.893 232.864L225.773 249.932Z"
+                fill="#E4E4E4" fill-opacity="0.87" />
+              <path class="piece-2"
+                d="M236.583 130.046L176.572 164.692V95.4004C188.943 95.4004 200.811 98.6201 211.204 104.657C216.367 107.642 221.195 111.365 225.52 115.691C229.878 120.051 233.566 124.881 236.583 130.046Z"
+                fill="#437AAC" />
+              <path class="piece-1"
+                d="M176.458 26.4717V164.505H38.4238C38.4238 139.361 45.1537 115.793 56.8951 95.4599C69.0089 74.4971 86.4779 57.0281 107.441 44.9144C127.716 33.2015 151.314 26.4717 176.458 26.4717Z"
+                fill="#6C4380" />
+            </svg>
           </div>
-          <div class="description-item">
-            <div class="description__image">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="7" fill="#4D7E64" />
-              </svg>
+          <div class="chart__description">
+            <div class="description-item">
+              <div class="description__image">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="7" fill="#6C4380" />
+                </svg>
+              </div>
+              <div class="description__text">
+                Medicine
+              </div>
             </div>
-            <div class="description__text">
-              Transport
+            <div class="description-item">
+              <div class="description__image">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="7" fill="#4D7E64" />
+                </svg>
+              </div>
+              <div class="description__text">
+                Transport
+              </div>
             </div>
-          </div>
-          <div class="description-item">
-            <div class="description__image">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="7" fill="#E4E4E4" />
-              </svg>
+            <div class="description-item">
+              <div class="description__image">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="7" fill="#E4E4E4" />
+                </svg>
 
+              </div>
+              <div class="description__text">
+                Finance
+              </div>
             </div>
-            <div class="description__text">
-              Finance
-            </div>
-          </div>
-          <div class="description-item">
-            <div class="description__image">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="7" fill="#BC9C49" />
-              </svg>
-
-
-            </div>
-            <div class="description__text">
-              Manufacturing
-            </div>
-          </div>
-          <div class="description-item">
-            <div class="description__image">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="7" fill="#437AAC" />
-              </svg>
+            <div class="description-item">
+              <div class="description__image">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="7" fill="#BC9C49" />
+                </svg>
 
 
+              </div>
+              <div class="description__text">
+                Manufacturing
+              </div>
             </div>
-            <div class="description__text">
-              Education
+            <div class="description-item">
+              <div class="description__image">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="7" fill="#437AAC" />
+                </svg>
+
+
+              </div>
+              <div class="description__text">
+                Education
+              </div>
             </div>
           </div>
-        </div>
         </div>
         <div class="chart__description-2">
           <div class="description-2__text text__subtitle_large">
@@ -333,7 +354,7 @@
 
   <!-- ///////training platform///// -->
 
-  <section class="training-wrapper-bg">
+  <section class="training-wrapper-bg" id="training-wrapper">
     <div class="training-wrapper container ">
 
       <div class="training-title">
@@ -500,7 +521,7 @@
             <div class="according-item">
               <button class="accordion__btn">
                 <p>Introduction to Programming</p>
-                
+
                 <div class="btn__arrow">
                   <img src="./img/Vector_arrow.svg" alt="">
                   <img hidden class="arrow" src="./img/Vector_arrow_deg.svg" alt="">
@@ -517,13 +538,13 @@
             <div class="according-item">
               <button class="accordion__btn">
                 <p>Mobile App Development</p>
-                     <div class="btn__arrow">
+                <div class="btn__arrow">
                   <img src="./img/Vector_arrow.svg" alt="">
                   <img hidden class="arrow" src="./img/Vector_arrow_deg.svg" alt="">
                 </div>
               </button>
               <div class="accordion__text">
-            
+
                 Mobile app development involves creating applications specifically designed to run on mobile devices.
                 You can choose to develop apps for iOS (Apple) using Swift programming language or for Android using
                 Java or Kotlin. You will learn about user interface design, handling user input, integrating various
@@ -550,7 +571,7 @@
             <div class="according-item">
               <button class="accordion__btn">
                 <p>Augmented and Virtual Reality App Development</p>
-                
+
                 <div class="btn__arrow">
                   <img src="./img/Vector_arrow.svg" alt="">
                   <img hidden class="arrow" src="./img/Vector_arrow_deg.svg" alt="">
@@ -568,7 +589,7 @@
             <div class="according-item">
               <button class="accordion__btn">
                 <p>Blockchain Game Development</p>
-                
+
                 <div class="btn__arrow">
                   <img src="./img/Vector_arrow.svg" alt="">
                   <img hidden class="arrow" src="./img/Vector_arrow_deg.svg" alt="">
@@ -603,20 +624,21 @@
         Elvaston PI str. 23
       </div>
       <div class="map-wrapper">
-        
+
         <div class="map-location">
-          
-        <div class="location-text text__subtitle">
-          Looking for a location on a map? Just type an address or place name into the search box and our interactive map will show you its location. 
+
+          <div class="location-text text__subtitle">
+            Looking for a location on a map? Just type an address or place name into the search box and our interactive
+            map will show you its location.
+          </div>
         </div>
-        </div>
-        
+
         <div class="map-content">
-          
+
           <div class="map" id="map">
           </div>
         </div>
-       
+
       </div>
     </div>
 

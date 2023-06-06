@@ -152,14 +152,14 @@ function init() {
     iconImageOffset: [-10, -80],
 
   }),
-  placemark_main.balloon.open;
-    map.geoObjects.add(placemark_main);
-    map.controls.remove('searchControl'); // удаляем поиск
-    map.controls.remove('trafficControl'); // удаляем контроль трафика
-    map.controls.remove('typeSelector'); // удаляем тип
-    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-    map.controls.remove('rulerControl');
+    placemark_main.balloon.open;
+  map.geoObjects.add(placemark_main);
+  map.controls.remove('searchControl'); // удаляем поиск
+  map.controls.remove('trafficControl'); // удаляем контроль трафика
+  map.controls.remove('typeSelector'); // удаляем тип
+  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  map.controls.remove('rulerControl');
 }
 
 ymaps.ready(init);
@@ -171,13 +171,13 @@ ymaps.ready(init);
 //   let scale = 1;
 //   let increment = 0.1;
 //   const maxScale = 1.1; 
-  
+
 
 //   const interval = setInterval(() => {
 //     for (let i = 0; i < icons.length; i++) {
 //       const icon = icons[i];
 //       icon.style.transform = `scale(${scale})`;
-    
+
 //     }
 
 //     scale += increment;
@@ -212,3 +212,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1000);
 });
+
+
+////pop-up////
+
+const menu = document.getElementById('menu');
+const checkbox = document.getElementById('menuToggle');
+
+menu.style.display = "none";
+
+function toggleMenu() {
+  if (window.innerWidth < 590) {
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+  }
+}
+
+checkbox.onclick = toggleMenu;
+window.addEventListener("resize", toggleMenu);
+
+
+const menuToggle = document.getElementById('menuToggle');
+const input = menuToggle.querySelector('input');
+const spans = menuToggle.querySelectorAll('span');
+
+input.addEventListener('change', function() {
+  if (this.checked) {
+    spans[0].style.opacity = '1';
+    spans[0].style.transform = 'rotate(45deg) translate(-2px, -1px)';
+    spans[0].style.background = '#ececec';
+    spans[1].style.opacity = '0';
+    spans[1].style.transform = 'rotate(0deg) scale(0.2, 0.2)';
+    spans[2].style.transform = 'rotate(-45deg) translate(-1px, -4px)';
+  } else {
+    spans[0].style.opacity = '';
+    spans[0].style.transform = '';
+    spans[0].style.background = '';
+    spans[1].style.opacity = '';
+    spans[1].style.transform = '';
+    spans[2].style.transform = '';
+  }
+});
+const menuItems = document.getElementsByClassName('menu-item');
+
+for (let i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener('click', function() {
+    spans[0].style.opacity = '';
+    spans[0].style.transform = '';
+    spans[0].style.background = '';
+    spans[1].style.opacity = '';
+    spans[1].style.transform = '';
+    spans[2].style.transform = '';
+  });
+}
