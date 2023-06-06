@@ -146,48 +146,18 @@ function init() {
     balloonContentBody: 'Elvaston PI str. 23',
     balloonContentFooter: '',
   }, {
-    iconLayout: 'default#image',
-    iconImageHref: './img/logo_1.svg',
-    iconImageSize: [30, 30],
-    iconImageOffset: [-10, -80],
-
+    
   }),
     placemark_main.balloon.open;
   map.geoObjects.add(placemark_main);
   map.controls.remove('searchControl'); // удаляем поиск
   map.controls.remove('trafficControl'); // удаляем контроль трафика
   map.controls.remove('typeSelector'); // удаляем тип
-  map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-  map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+  // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
   map.controls.remove('rulerControl');
 }
 
 ymaps.ready(init);
-
-//////icon transform///////
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const icons = document.getElementsByClassName('icon__item');
-//   let scale = 1;
-//   let increment = 0.1;
-//   const maxScale = 1.1; 
-
-
-//   const interval = setInterval(() => {
-//     for (let i = 0; i < icons.length; i++) {
-//       const icon = icons[i];
-//       icon.style.transform = `scale(${scale})`;
-
-//     }
-
-//     scale += increment;
-
-//     if (scale >= maxScale || scale <= 1) {
-//       increment = -increment;
-//     }
-//   }, 1500);
-// });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const icons = document.getElementsByClassName('icon__item');
@@ -212,7 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1000);
 });
-
 
 ////pop-up////
 
