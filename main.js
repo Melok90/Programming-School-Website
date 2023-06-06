@@ -194,15 +194,16 @@ function toggleMenu() {
   if (window.innerWidth < 590) {
     if (menu.style.display === "none") {
       menu.style.display = "block";
+      document.body.classList.add('menu-open'); 
     } else {
       menu.style.display = "none";
+      document.body.classList.remove('menu-open'); 
     }
   }
 }
 
 checkbox.onclick = toggleMenu;
 window.addEventListener("resize", toggleMenu);
-
 
 const menuToggle = document.getElementById('menuToggle');
 const input = menuToggle.querySelector('input');
@@ -216,6 +217,8 @@ input.addEventListener('change', function() {
     spans[1].style.opacity = '0';
     spans[1].style.transform = 'rotate(0deg) scale(0.2, 0.2)';
     spans[2].style.transform = 'rotate(-45deg) translate(-1px, -4px)';
+    menu.style.transform = 'scale(1)';
+    menu.style.opacity = '1';
   } else {
     spans[0].style.opacity = '';
     spans[0].style.transform = '';
@@ -223,8 +226,11 @@ input.addEventListener('change', function() {
     spans[1].style.opacity = '';
     spans[1].style.transform = '';
     spans[2].style.transform = '';
+    menu.style.transform = 'scale(0.8)';
+    menu.style.opacity = '0';
   }
 });
+
 const menuItems = document.getElementsByClassName('menu-item');
 
 for (let i = 0; i < menuItems.length; i++) {
@@ -235,5 +241,7 @@ for (let i = 0; i < menuItems.length; i++) {
     spans[1].style.opacity = '';
     spans[1].style.transform = '';
     spans[2].style.transform = '';
+    menu.style.transform = 'scale(0.8)';
+    menu.style.opacity = '0';
   });
 }
