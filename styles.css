@@ -752,6 +752,46 @@ body {
 .chart-wrapper .chart-box .chart__description .description-item:last-child {
   margin-bottom: 0px;
 }
+.chart-wrapper .chart-box .chart__description .description-item:first-child .description__text::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgb(108, 67, 128);
+  display: inline-block;
+}
+.chart-wrapper .chart-box .chart__description .description-item:nth-child(2) .description__text::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgb(77, 126, 100);
+  display: inline-block;
+}
+.chart-wrapper .chart-box .chart__description .description-item:nth-child(3) .description__text::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgb(228, 228, 228);
+  display: inline-block;
+}
+.chart-wrapper .chart-box .chart__description .description-item:nth-child(4) .description__text::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgb(188, 156, 73);
+  display: inline-block;
+}
+.chart-wrapper .chart-box .chart__description .description-item:nth-child(5) .description__text::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgb(67, 122, 172);
+  display: inline-block;
+}
 .chart-wrapper .chart-box .chart__description .description-item .description__text {
   font-family: "Share Tech Mono";
   font-style: normal;
@@ -759,7 +799,7 @@ body {
   font-size: 16px;
   line-height: 14px;
   color: #ececec;
-  margin-left: 4px;
+  white-space: nowrap;
 }
 @media (min-width: 790px) {
   .chart-wrapper .chart-box .chart__description .description-item .description__text {
