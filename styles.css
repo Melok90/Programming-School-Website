@@ -608,15 +608,13 @@ body {
 }
 @media (min-width: 430px) {
   .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item {
-    height: 178px;
     padding: 10px;
   }
 }
 @media (min-width: 792px) {
   .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item {
     width: 100%;
-    padding: 22.5px;
-    height: 178px;
+    padding: 16px;
   }
 }
 .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item:hover {
@@ -625,7 +623,12 @@ body {
   -webkit-transform: scale(1.02, 1.05);
           transform: scale(1.02, 1.05);
 }
-.swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item__text {
+.swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item-content .slide-item__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,23 +639,21 @@ body {
   margin-left: 10px;
   max-width: calc(200px + 130 * (100vw - 320px) / 1200);
   font-weight: 400;
-  font-size: 14px;
+  font-size: calc(14px + 8 * (100vw - 320px) / 1200);
   line-height: 103%;
   color: #ececec;
 }
 @media (min-width: 792px) {
-  .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item__text {
+  .swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item-content .slide-item__text {
     width: 100%;
-    font-size: 24px;
     margin-left: 22.5px;
-    max-width: 230px;
   }
 }
-.swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item__image {
+.swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item-content .slide-item__image {
   min-width: 70px;
   max-width: 75px;
 }
-.swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item__image img {
+.swiper-news-wrapper .swiper .swiper-wrapper .swiper-slide .slide-item .slide-item-content .slide-item__image img {
   border-radius: 5px;
 }
 
@@ -947,6 +948,9 @@ body {
   .training-wrapper-bg .training-title-bottom .title-bottom-text {
     font-size: 32px;
   }
+}
+.training-wrapper-bg .training-title-bottom .title-bottom-text::first-letter {
+  color: rgb(248, 253, 239);
 }
 .training-wrapper-bg .photo-wrapper-section {
   margin-top: 76px;
