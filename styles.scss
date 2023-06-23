@@ -220,7 +220,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 0px 20px;
-    display: none;
+    // display: none;
     @media (min-width: 470px) {
       display: block;
     }
@@ -382,7 +382,10 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
-  margin-top: 20px;
+  margin-top: 180px;
+  @media (min-width: 792px) {
+    margin-top: 20px;
+  }
 
   .our-materials-container {
     display: flex;
@@ -420,7 +423,10 @@ body {
       }
 
       .our-block__title {
-        text-align: left;
+        text-align: center;
+        @media (min-width: 790px) {
+          text-align: left;
+        }
       }
       .our-block__subtitle {
         margin-top: 16px;

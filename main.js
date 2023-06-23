@@ -95,41 +95,41 @@ for (i = 0; i < acc.length; i++) {
 
 ///////////title/////
 
-const t = [
-  'Choose our courses and find out how AI affect our lives right now'
-];
+// const t = [
+//   'Choose our courses and find out how AI affect our lives right now'
+// ];
 
-function typeText() {
-  let line = 0;
-  let count = 0;
-  let out = '';
-  let htmlOut = document.querySelector('.out');
+// function typeText() {
+//   let line = 0;
+//   let count = 0;
+//   let out = '';
+//   let htmlOut = document.querySelector('.out');
 
-  function typeLine() {
-    let interval = setTimeout(function () {
-      out += t[line][count];
-      htmlOut.innerHTML = out + '|';
-      count++;
+//   function typeLine() {
+//     let interval = setTimeout(function () {
+//       out += t[line][count];
+//       htmlOut.innerHTML = out + '|';
+//       count++;
 
-      if (count >= t[line].length) {
-        count = 0;
-        line++;
-        if (line == t.length) {
-          clearTimeout(interval);
-          htmlOut.innerHTML = out;
-          return true;
-        }
-      }
+//       if (count >= t[line].length) {
+//         count = 0;
+//         line++;
+//         if (line == t.length) {
+//           clearTimeout(interval);
+//           htmlOut.innerHTML = out;
+//           return true;
+//         }
+//       }
 
-      typeLine();
-    }, getRandomInt(getRandomInt(150 * 4)));
-  }
-  typeLine();
-}
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-typeText();
+//       typeLine();
+//     }, getRandomInt(getRandomInt(150 * 4)));
+//   }
+//   typeLine();
+// }
+// function getRandomInt(max) {
+//   return Math.floor(Math.random() * Math.floor(max));
+// }
+// typeText();
 
 //////map/////
 
