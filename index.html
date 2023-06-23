@@ -6,6 +6,7 @@
   <title>My_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1">
   <link rel="icon" type="image/x-icon" href="./img/logo_2.svg">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
@@ -116,7 +117,7 @@
         <div class="our-block__title text__subtitle_large">
           <span class="text-color">About us</span>
         </div>
-        <div class="our-block__subtitle text__subtitle">
+        <div data-aos="zoom-in" class="our-block__subtitle text__subtitle">
           We are a platform for learning and immersing ourselves in all things artificial intelligence. Our aim is to
           help students, professionals and inquisitive people develop their knowledge and skills in artificial
           intelligence.
@@ -353,7 +354,7 @@
 
       <div class="training-wrapper-cards-group-1">
         <div class="training-wrapper-cards">
-          <div class="card-item">
+          <div  class="card-item">
             <div class="card__image">
               <img src="./img/training-icon/online_learning-1.svg" alt="">
             </div>
@@ -443,7 +444,7 @@
         <img class="myImage" id="myImage" src="./img/photo/photo-1.png" alt="">
       </div>
       <div class="section-swiper-text">
-        <div class="swiper-text-wrapper">
+        <div data-aos="fade-right" class="swiper-text-wrapper">
           <div class="swiper-text__title">
             Introduction to Programming:
           </div>
@@ -451,7 +452,7 @@
             fundamentals of algorithms, data structures, and basic programming languages.
           </div>
         </div>
-        <div class="swiper-text-wrapper">
+        <div data-aos="fade-left" class="swiper-text-wrapper">
           <div class="swiper-text__title">
             Mobile App Development:
           </div>
@@ -459,7 +460,7 @@
             creating iOS and Android apps using Swift, Java, or Kotlin.
           </div>
         </div>
-        <div class="swiper-text-wrapper">
+        <div data-aos="fade-right" class="swiper-text-wrapper">
           <div class="swiper-text__title">
             Artificial Intelligence and Machine Learning:
           </div>
@@ -467,7 +468,7 @@
             basics of machine learning, neural networks, natural language processing.
           </div>
         </div>
-        <div class="swiper-text-wrapper">
+        <div data-aos="fade-left" class="swiper-text-wrapper">
           <div class="swiper-text__title">
             Robotics:
           </div>
@@ -475,7 +476,7 @@
             building and programming robots, working with sensors and motors, solving tasks in autonomous navigation.
           </div>
         </div>
-        <div class="swiper-text-wrapper">
+        <div data-aos="fade-right" class="swiper-text-wrapper">
           <div class="swiper-text__title">
             Augmented and Virtual Reality App Development:
           </div>
@@ -483,7 +484,7 @@
             creating AR and VR applications for devices.
           </div>
         </div>
-        <div class="swiper-text-wrapper">
+        <div data-aos="fade-left" class="swiper-text-wrapper">
           <div class="swiper-text__title">
             Blockchain Game Development:
           </div>
@@ -768,6 +769,7 @@
 
   </script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=6ef30beb-2715-4c0a-8eff-ee14439669ef&lang=en_US"
     type="text/javascript">

@@ -13,7 +13,9 @@
 
 body {
   font-family: "Share Tech Mono", monospace;
-  background-color: #1e1e1e;
+  background-color: #262420;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .container {
@@ -23,10 +25,11 @@ body {
 }
 .background-container {
   max-width: 1960px;
-  background-image: url("./img/backgrn_1_all.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
+  // background-image: url("./img/backgrn_1_all.svg");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   margin: 0 auto;
 
   .header-wrapper {
@@ -375,10 +378,11 @@ body {
 .our-materials {
   max-width: 1960px;
 
-  background-image: url("./img/maskgroup_our_bk.svg");
+  // background-image: url("./img/maskgroup_our_bk.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
+  margin-top: 20px;
 
   .our-materials-container {
     display: flex;
@@ -461,10 +465,10 @@ body {
   }
 }
 .swiper-news-wrapper {
-  background-image: url("./img/backgrn_section_wrapper.svg");
-  background-color: #313039;
-  background-position: center;
-  background-size: contain;
+  // background-image: url("./img/backgrn_section_wrapper.svg");
+  background-color: #262420;
+  // background-position: center;
+  // background-size: contain;
   padding-top: 40px;
   @media (min-width: 792px) {
     padding-top: 100px;
@@ -615,6 +619,7 @@ body {
           margin-bottom: 20px;
         }
 
+        
         &:last-child {
           margin-bottom: 0px;
         }
@@ -696,7 +701,10 @@ body {
           &:hover {
             color: #ffffff;
           } 
-          
+          &:hover::before {
+            scale: (1.2);
+          }
+
         } 
       }
     }
@@ -719,10 +727,10 @@ body {
 }
 
 .training-wrapper-bg {
-  background-image: url("./img/backgrn_section_wrapper_two.svg");
-  background-color: #313039;
-  background-position: top;
-  background-size: contain;
+  // background-image: url("./img/backgrn_section_wrapper_two.svg");
+  background-color: #262420;
+  // background-position: top;
+  // background-size: contain;
   .training-wrapper {
     padding: 0px 28px;
 
@@ -926,10 +934,10 @@ body {
   }
 }
 .according-wrapper-bg {
-  background-image: url("./img/backgrn_section_wrapper.svg");
-  background-color: #313039;
-  background-position: top;
-  background-size: contain;
+  // background-image: url("./img/backgrn_section_wrapper.svg");
+  background-color: #262420;
+  // background-position: top;
+  // background-size: contain;
 }
 .according-wrapper {
   padding: 24px 0px 24px 0px;
@@ -1032,10 +1040,10 @@ body {
 
 ////map////
 .footer-background {
-  background-image: url("./img/backgrn_section_wrapper.svg");
-  background-color: #313039;
-  background-position: top;
-  background-size: contain;
+  // background-image: url("./img/backgrn_section_wrapper.svg");
+  background-color: #262420;
+  // background-position: top;
+  // background-size: contain;
 
   .map-location-wrapper {
     display: flex;

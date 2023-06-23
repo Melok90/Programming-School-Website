@@ -1,4 +1,6 @@
 
+  AOS.init();
+
 //swiper/////
 var swiper = new Swiper(".mySwiper", {
 
